@@ -5,8 +5,8 @@ Release:	3
 License:	GPL
 Group:		X11/Applications/Networking
 Group(pl):	X11/Aplikacje/Sieciowe
-Source:		http://www.pcc.net/alchemy/ferret/%{name}-%{version}.tar.gz
-patch:		netferret-ac_am.patch
+Source0:	http://www.pcc.net/alchemy/ferret/%{name}-%{version}.tar.gz
+Patch0:		netferret-ac_am.patch
 URL:		http://www.pcc.net/alchemy/ferret/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -14,10 +14,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_sysconfdir	/etc/X11/GNOME
 
 %description
-Net Ferret is a tool to help you get quicker results when searching the
-internet. It runs as an applet in the GNOME toolbar. Searching is painful
-enough already without that pesky search engine front page with seven
-hundred advertisements...
+Net Ferret is a tool to help you get quicker results when searching
+the internet. It runs as an applet in the GNOME toolbar. Searching is
+painful enough already without that pesky search engine front page
+with seven hundred advertisements...
 
 %prep
 %setup -q
