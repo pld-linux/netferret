@@ -3,7 +3,8 @@ Name:		netferret
 Version:	0.1b2
 Release:	2
 Copyright:	GPL
-Group:		Applications/Internet
+Group:		X11/GNOME/Applications/Networking
+Group(pl):	X11/GNOME/Aplikacje/Sieciowe
 Source:		http://www.pcc.net/alchemy/ferret/netferret-0.1b2.tar.gz
 patch:		netferret-ac_am.patch
 URL:		http://www.pcc.net/alchemy/ferret/
