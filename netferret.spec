@@ -5,8 +5,6 @@ Version:	0.1b2
 Release:	5
 License:	GPL
 Group:		X11/Applications/Networking
-Group(de):	X11/Applikationen/Netzwerkwesen
-Group(pl):	X11/Aplikacje/Sieciowe
 Source0:	http://www.pcc.net/alchemy/ferret/%{name}-%{version}.tar.gz
 Patch0:		%{name}-ac_am.patch
 URL:		http://www.pcc.net/alchemy/ferret/
