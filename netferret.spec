@@ -6,6 +6,7 @@ Release:	6
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://www.pcc.net/alchemy/ferret/%{name}-%{version}.tar.gz
+# Source0-md5:	135058e9bed77fc93e89b39dc43fed54
 Patch0:		%{name}-ac_am.patch
 URL:		http://www.pcc.net/alchemy/ferret/
 BuildRequires:	autoconf
