@@ -1,7 +1,7 @@
 Summary:	GNOME toolbar app for querying web search engines
 Name:		netferret
 Version:	0.1b2
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Applications/Networking
 Group(de):	X11/Applikationen/Netzwerkwesen
@@ -35,7 +35,7 @@ automake -a -c
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR="$RPM_BUILD_ROOT"
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
