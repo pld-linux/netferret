@@ -8,7 +8,7 @@ Group(pl):	X11/Aplikacje/Sieciowe
 Source:		http://www.pcc.net/alchemy/ferret/%{name}-%{version}.tar.gz
 patch:		netferret-ac_am.patch
 URL:		http://www.pcc.net/alchemy/ferret/
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_sysconfdir	/etc/X11/GNOME
