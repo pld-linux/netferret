@@ -43,7 +43,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/ferret_applet
-%{_datadir}/pixmaps/ferret_logo.xpm
-%{_datadir}/pixmaps/ferret_paw.xpm
+%{_pixmapsdir}/ferret_logo.xpm
+%{_pixmapsdir}/ferret_paw.xpm
 %{_datadir}/applets/Network/ferret_applet.desktop
 %{_sysconfdir}/CORBA/servers/*
