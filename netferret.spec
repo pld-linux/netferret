@@ -1,11 +1,11 @@
 Summary:	GNOME toolbar app for querying web search engines.
 Name:		netferret
 Version:	0.1b2
-Release:	2
-Copyright:	GPL
-Group:		X11/GNOME/Applications/Networking
-Group(pl):	X11/GNOME/Aplikacje/Sieciowe
-Source:		http://www.pcc.net/alchemy/ferret/netferret-0.1b2.tar.gz
+Release:	3
+License:	GPL
+Group:		X11/Applications/Networking
+Group(pl):	X11/Aplikacje/Sieciowe
+Source:		http://www.pcc.net/alchemy/ferret/%{name}-%{version}.tar.gz
 patch:		netferret-ac_am.patch
 URL:		http://www.pcc.net/alchemy/ferret/
 BuildRoot:	/tmp/%{name}-%{version}-root
