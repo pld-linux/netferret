@@ -1,12 +1,13 @@
-Summary:	GNOME toolbar app for querying web search engines.
+Summary:	GNOME toolbar app for querying web search engines
 Name:		netferret
 Version:	0.1b2
-Release:	3
+Release:	4
 License:	GPL
 Group:		X11/Applications/Networking
+Group(de):	X11/Applikationen/Netzwerkwesen
 Group(pl):	X11/Aplikacje/Sieciowe
 Source0:	http://www.pcc.net/alchemy/ferret/%{name}-%{version}.tar.gz
-Patch0:		netferret-ac_am.patch
+Patch0:		%{name}-ac_am.patch
 URL:		http://www.pcc.net/alchemy/ferret/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -27,13 +28,13 @@ with seven hundred advertisements...
 aclocal
 autoconf
 rm -f install-sh missing mkinstalldirs
-automake --copy --add-missing
-LDFLAGS="-s"; export LDFLAGS
+automake -a -c 
 %configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %{__make} install DESTDIR="$RPM_BUILD_ROOT"
 
 %clean
