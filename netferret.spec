@@ -35,7 +35,7 @@ pocz±tkowych wyszukiwarek z tysi±cami reklam...
 %build
 rm -f install-sh missing mkinstalldirs
 %{__libtoolize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
