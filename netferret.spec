@@ -28,8 +28,8 @@ with seven hundred advertisements...
 
 %description -l pl
 Net Ferret to narzêdzie pomagaj±ce otrzymaæ szybciej rezultaty przy
-przeszukawaniu Internetu. Dzia³a jako aplet toolbaru GNOME. Szukanie
-jest systarczaj±co bolesne nawet bez tych wszystkich stron
+przeszukiwaniu Internetu. Dzia³a jako aplet toolbaru GNOME. Szukanie
+jest wystarczaj±co bolesne nawet bez tych wszystkich stron
 pocz±tkowych wyszukiwarek z tysi±cami reklam...
 
 %prep
