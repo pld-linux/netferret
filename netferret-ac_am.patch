@@ -75,3 +75,35 @@ diff -Nru netferret-0.1b2/src/Makefile.am netferret-0.1b2.new/src/Makefile.am
 -
  
  
+diff -uNr netferret-0.1b2.orig/configure.in netferret-0.1b2/configure.in
+--- netferret-0.1b2.orig/configure.in	Sun Aug 11 19:04:49 2002
++++ netferret-0.1b2/configure.in	Sun Aug 11 19:12:22 2002
+@@ -72,6 +72,16 @@
+       AC_DEFINE(NO_GNOME)
+ fi
+ 
+-AC_OUTPUT(Makefile src/Makefile install.d/Makefile)
++dnl we need to check the lib first
++AC_PATH_PROG(EXTRA_ORBIT_CONFIG, orbit-config,no)
++if test x$EXTRA_ORBIT_CONFIG = xno; then
++  AC_MSG_ERROR(Couldn't find orbit-config, please install the ORBit package.)
++fi
+ 
++EXTRA_ORBIT_LIBS=`orbit-config --libs server`
++EXTRA_ORBIT_CFLAGS=`orbit-config --cflags server`
+ 
++AC_SUBST(EXTRA_ORBIT_LIBS)
++AC_SUBST(EXTRA_ORBIT_CFLAGS)
++
++AC_OUTPUT(Makefile src/Makefile install.d/Makefile)
+diff -uNr netferret-0.1b2/configure.in netferret-0.1b2.new/configure.in
+--- netferret-0.1b2/configure.in	Sun Aug 11 19:20:10 2002
++++ netferret-0.1b2.new/configure.in	Sun Aug 11 19:21:01 2002
+@@ -84,4 +84,7 @@
+ AC_SUBST(EXTRA_ORBIT_LIBS)
+ AC_SUBST(EXTRA_ORBIT_CFLAGS)
+ 
++LIBS="$LIBS $EXTRA_ORBIT_LIBS"
++CFLAGS="$CFLAGS $EXTRA_ORBIT_CFLAGS"
++
+ AC_OUTPUT(Makefile src/Makefile install.d/Makefile)
