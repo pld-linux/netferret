@@ -5,12 +5,16 @@ Version:	0.1b2
 Release:	6
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://www.pcc.net/alchemy/ferret/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/netferret/%{name}-%{version}.tar.gz
 # Source0-md5:	135058e9bed77fc93e89b39dc43fed54
 Patch0:		%{name}-ac_am.patch
-URL:		http://www.pcc.net/alchemy/ferret/
+URL:		http://netferret.sourceforge.net/
+BuildRequires:	ORBit-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	gnome-core-devel >= 1.0
+BuildRequires:	gtk+-devel >= 1.2.0
+BuildRequires:	libghttp-devel
 BuildRequires:	libtool
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -33,7 +37,6 @@ pocz±tkowych wyszukiwarek z tysi±cami reklam...
 %patch -p1
 
 %build
-rm -f install-sh missing mkinstalldirs
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
@@ -44,7 +47,8 @@ rm -f install-sh missing mkinstalldirs
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
