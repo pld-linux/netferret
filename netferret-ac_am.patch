@@ -1,0 +1,77 @@
+diff -Nru netferret-0.1b2/Makefile.am netferret-0.1b2.new/Makefile.am
+--- netferret-0.1b2/Makefile.am	Fri Oct 29 14:45:03 1999
++++ netferret-0.1b2.new/Makefile.am	Fri Oct 29 14:44:31 1999
+@@ -1,27 +1 @@
+-SUBDIRS = src
+-
+-
+-# Edit these target directories if they differ on your 
+-# system. If you change anything, run "autoremake", then
+-# continue with installation as usual.
+-
+-BINDIR = /usr/bin
+-DESKTOPDIR = /usr/share/applets/Network
+-CORBADIR = /etc/CORBA/servers
+-SOURCEDIR = install.d
+-PIXMAPDIR = /usr/share/pixmaps
+-
+-
+-install:
+-	$(INSTALL_PROGRAM) $(SOURCEDIR)/ferret_applet $(BINDIR)/ferret_applet
+-	$(INSTALL_PROGRAM) $(SOURCEDIR)/ferret_applet.gnorba $(CORBADIR)/ferret_applet.gnorba
+-	$(INSTALL_PROGRAM) $(SOURCEDIR)/ferret_applet.desktop $(DESKTOPDIR)/ferret_applet.desktop
+-	$(INSTALL_PROGRAM) $(SOURCEDIR)/ferret_logo.xpm $(PIXMAPDIR)/ferret_logo.xpm
+-	$(INSTALL_PROGRAM) $(SOURCEDIR)/ferret_paw.xpm $(PIXMAPDIR)/ferret_paw.xpm
+-	./install-sh
+-
+-uninstall:
+-	rm $(BINDIR)/ferret_applet $(CORBADIR)/ferret_applet.gnorba $(DESKTOPDIR)/ferret_applet.desktop $(PIXMAPDIR)/ferret_logo.xpm $(PIXMAPDIR)/ferret_paw.xpm	
+-
+-clean:
+-	rm $(SOURCEDIR)/ferret_applet
++SUBDIRS = src install.d
+diff -Nru netferret-0.1b2/configure.in netferret-0.1b2.new/configure.in
+--- netferret-0.1b2/configure.in	Fri Oct 29 14:45:03 1999
++++ netferret-0.1b2.new/configure.in	Fri Oct 29 14:44:31 1999
+@@ -72,6 +72,6 @@
+       AC_DEFINE(NO_GNOME)
+ fi
+ 
+-AC_OUTPUT(Makefile src/Makefile)
++AC_OUTPUT(Makefile src/Makefile install.d/Makefile)
+ 
+ 
+diff -Nru netferret-0.1b2/install.d/Makefile.am netferret-0.1b2.new/install.d/Makefile.am
+--- netferret-0.1b2/install.d/Makefile.am	Thu Jan  1 01:00:00 1970
++++ netferret-0.1b2.new/install.d/Makefile.am	Fri Oct 29 14:44:31 1999
+@@ -0,0 +1,9 @@
++
++DESKTOPdir = $(datadir)/applets/Network
++DESKTOP_DATA = ferret_applet.desktop
++
++CORBAdir = $(sysconfdir)/CORBA/servers
++CORBA_DATA = ferret_applet.gnorba
++
++PIXMAPdir = $(datadir)/pixmaps
++PIXMAP_DATA = ferret_logo.xpm ferret_paw.xpm
+diff -Nru netferret-0.1b2/src/Makefile.am netferret-0.1b2.new/src/Makefile.am
+--- netferret-0.1b2/src/Makefile.am	Fri Oct 29 14:45:03 1999
++++ netferret-0.1b2.new/src/Makefile.am	Fri Oct 29 14:45:24 1999
+@@ -1,7 +1,5 @@
+-AUTOMAKE_OPTIONS = no-dependencies
+ bin_PROGRAMS = ferret_applet
+ 
+-bin_DIR = ../install.d/
+ ferret_applet_SOURCES =  dialogs.c \
+                 ferret.c \
+                 preferences.c \
+@@ -11,9 +9,5 @@
+                 stringtokenizer.c \
+                 urlencoder.c \
+                 webupdate.c
+-
+-ferret_applet: $(ferret_applet_OBJECTS)
+-	$(COMPILE) $(ferret_applet_OBJECTS) $(LIBS) -o ../install.d/ferret_applet
+-
+ 
+ 
