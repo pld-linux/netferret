@@ -35,7 +35,7 @@ pocz±tkowych wyszukiwarek z tysi±cami reklam...
 aclocal
 autoconf
 rm -f install-sh missing mkinstalldirs
-automake -a -c
+automake -a -c -f
 %configure
 %{__make}
 
