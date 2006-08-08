@@ -34,7 +34,7 @@ pocz±tkowych wyszukiwarek z tysi±cami reklam...
 
 %prep
 %setup -q
-%patch -p1
+%patch0 -p1
 
 %build
 %{__libtoolize}
