@@ -1,5 +1,5 @@
 Summary:	GNOME toolbar app for querying web search engines
-Summary(pl):	Aplet GNOME do odpytywania wyszukiwarek sieciowych
+Summary(pl.UTF-8):   Aplet GNOME do odpytywania wyszukiwarek sieciowych
 Name:		netferret
 Version:	0.1b2
 Release:	6
@@ -26,11 +26,11 @@ the Internet. It runs as an applet in the GNOME toolbar. Searching is
 painful enough already without that pesky search engine front page
 with seven hundred advertisements...
 
-%description -l pl
-Net Ferret to narzêdzie pomagaj±ce otrzymaæ szybciej rezultaty przy
-przeszukiwaniu Internetu. Dzia³a jako aplet toolbaru GNOME. Szukanie
-jest wystarczaj±co bolesne nawet bez tych wszystkich stron
-pocz±tkowych wyszukiwarek z tysi±cami reklam...
+%description -l pl.UTF-8
+Net Ferret to narzÄ™dzie pomagajÄ…ce otrzymaÄ‡ szybciej rezultaty przy
+przeszukiwaniu Internetu. DziaÅ‚a jako aplet toolbaru GNOME. Szukanie
+jest wystarczajÄ…co bolesne nawet bez tych wszystkich stron
+poczÄ…tkowych wyszukiwarek z tysiÄ…cami reklam...
 
 %prep
 %setup -q
