@@ -1,5 +1,5 @@
 Summary:	GNOME toolbar app for querying web search engines
-Summary(pl.UTF-8):   Aplet GNOME do odpytywania wyszukiwarek sieciowych
+Summary(pl.UTF-8):	Aplet GNOME do odpytywania wyszukiwarek sieciowych
 Name:		netferret
 Version:	0.1b2
 Release:	6
