@@ -1,0 +1,3 @@
+- release 3,
+- spec adapterized,
+- recompiled in new environment with libesd not depends on liasound.
